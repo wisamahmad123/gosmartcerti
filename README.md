@@ -61,37 +61,76 @@ DB=DBUSERNAME:DBPASSWORD@tcp(HOST:DBPORT)/YOUR_DB_NAME?charset=utf8mb4&parseTime
 
 
 
-📌 API Endpoints
-Public Routes
-POST /login – Authenticate and receive a JWT token
+## 📌 API Endpoints
 
-GET /validate – Validate token (JWT required)
+### 🔓 Public Routes
 
-Protected Routes (JWT Required)
-Users
-GET /users
+| Method | Endpoint      | Description                   |
+|--------|---------------|-------------------------------|
+| POST   | `/login`      | Authenticate user and return JWT token |
+| GET    | `/validate`   | Validate current JWT token     |
 
-GET /users/:id
+---
 
-POST /users
+### 🔐 Protected Routes (Require JWT)
 
-PUT /users/:id
+#### 👤 Users
 
-DELETE /users/:id
+| Method | Endpoint        | Description              |
+|--------|-----------------|--------------------------|
+| GET    | `/users`        | Get all users            |
+| GET    | `/users/:id`    | Get user by ID           |
+| POST   | `/users`        | Create a new user        |
+| PUT    | `/users/:id`    | Update user by ID        |
+| DELETE | `/users/:id`    | Delete user by ID        |
 
-Vendors
-GET /vendors
+#### 🏢 Vendors
 
-GET /vendors/:id
+| Method | Endpoint          | Description              |
+|--------|-------------------|--------------------------|
+| GET    | `/vendors`        | Get all vendors          |
+| GET    | `/vendors/:id`    | Get vendor by ID         |
+| POST   | `/vendors`        | Create a new vendor      |
+| PUT    | `/vendors/:id`    | Update vendor by ID      |
+| DELETE | `/vendors/:id`    | Delete vendor by ID      |
 
-POST /vendors
+#### 🧠 Areas of Interest (`bidangMinats`)
 
-PUT /vendors/:id
+| Method | Endpoint               | Description                   |
+|--------|------------------------|-------------------------------|
+| GET    | `/bidangMinats`        | Get all areas of interest     |
+| GET    | `/bidangMinats/:id`    | Get area of interest by ID    |
+| POST   | `/bidangMinats`        | Create new area of interest   |
+| PUT    | `/bidangMinats/:id`    | Update area of interest by ID |
+| DELETE | `/bidangMinats/:id`    | Delete area of interest by ID |
 
-DELETE /vendors/:id
+#### 📚 Subjects (`mataKuliahs`)
 
-Areas of Interest (/bidangMinats)
-Subjects (/mataKuliahs)
-Trainings (/pelatihans)
-Certifications (/sertifikasis)
-All have standard CRUD endpoints: GET, GET by ID, POST, PUT, and DELETE.
+| Method | Endpoint              | Description                |
+|--------|-----------------------|----------------------------|
+| GET    | `/mataKuliahs`        | Get all subjects           |
+| GET    | `/mataKuliahs/:id`    | Get subject by ID          |
+| POST   | `/mataKuliahs`        | Create a new subject       |
+| PUT    | `/mataKuliahs/:id`    | Update subject by ID       |
+| DELETE | `/mataKuliahs/:id`    | Delete subject by ID       |
+
+#### 🏆 Trainings (`pelatihans`)
+
+| Method | Endpoint            | Description              |
+|--------|---------------------|--------------------------|
+| GET    | `/pelatihans`       | Get all trainings        |
+| GET    | `/pelatihans/:id`   | Get training by ID       |
+| POST   | `/pelatihans`       | Create a new training    |
+| PUT    | `/pelatihans/:id`   | Update training by ID    |
+| DELETE | `/pelatihans/:id`   | Delete training by ID    |
+
+#### 📜 Certifications (`sertifikasis`)
+
+| Method | Endpoint              | Description                  |
+|--------|-----------------------|------------------------------|
+| GET    | `/sertifikasis`       | Get all certifications       |
+| GET    | `/sertifikasis/:id`   | Get certification by ID      |
+| POST   | `/sertifikasis`       | Create a new certification   |
+| PUT    | `/sertifikasis/:id`   | Update certification by ID   |
+| DELETE | `/sertifikasis/:id`   | Delete certification by ID   |
+
