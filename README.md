@@ -47,17 +47,23 @@ cd go-smartcerti
 
 2. **Create a .env file**
 
+```bash
 SECRET_KEY=YOUR_SECRET_KEY
 PORT=:8080
 DB=DBUSERNAME:DBPASSWORD@tcp(HOST:DBPORT)/YOUR_DB_NAME?charset=utf8mb4&parseTime=True&loc=Local
+```
 
 3. **Install dependencies**
 
-   go mod tidy
+```bash
+go mod tidy
+```
 
 4. **Run the server**
-
-   go run main.go
+   
+```bash
+go run main.go
+```
 
 
 
